@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	<div class = "container">
+		<!-- https://marymond.kr/main/index 로그인 클릭시 뒷배경 블러처리 및 로그인 모달 -->
+		<h3> https://marymond.kr/main/index 로그인 클릭시 뒷배경 블러처리 및 로그인 모달 </h3>
+		
+		<!-- Button to Open the Modal -->
+		<div class =  "text-right">
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-backdrop="static">
+			로그인
+		</button>
+		</div>
+		
+		<!-- The Modal -->
+		<div class="modal" id="myModal">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		
+		    <!-- Modal Header -->
+			<div class="modal-header">
+				로그인
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+		
+			<!-- Modal body -->
+		    <div class="modal-body">
+		      	<button class="btn btn-outline-warning btn-block"> 카카오톡으로 로그인 </button>
+		      	<button class="btn btn-outline-primary btn-block"> 페이스북으로 로그인 </button>
+		      	<button class="btn btn-outline-secondary btn-block"> 구글로 로그인 </button>
+		      	<hr>
+		      	아이디 로그인
+		      	<br>
+		      	<br>
+		      	<div class="form-group">
+					<input type="text" class="form-control" id="id">
+				</div>
+				<div class="form-group">
+					<input type="password" class="form-control" id="pw">
+				</div>
+				<button class = "btn btn-dark btn-block"> 로그인 </button>
+		    </div>		
+		    </div>
+		  </div>
+		</div>
+		
+		<hr>
+		<h3> 훈련과정 검색</h3>
+		<br>
+		<table>
+			<tr>
+			<td> 훈련기관 </td>
+			<td><input type="text" class="form-control" id="1"></td>
+			</tr>
+			<tr>
+			<td> 훈련유형 </td>
+			<td></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
