@@ -253,7 +253,50 @@
 		str += '\n 화천군';
 		str += '\t \t \t 횡성군';
 		$('#targetTextarea').val(str);
-	})
+	});
+	
+	$('#btnSejong').click(function(){
+		$('#targetLabel').text('세종');
+		let str = " 세종";
+		$('#targetTextarea').val(str);
+	});
+	
+	$('#btnChungnam').click(function(){
+		$('#targetLabel').text('충남');
+		let str = "";
+		str += ' 계룡시';
+		str += '\t \t \t 공주시';
+		str += '\n 금산군';
+		str += '\t \t \t 논산시';
+		str += '\n 당진군';
+		str += '\t \t \t 당진시';
+		str += '\n 보령시';
+		str += '\t \t \t 부여군';
+		str += '\n 서산시';
+		str += '\t \t \t 서천군';
+		str += '\n 아산시';
+		str += '\t \t \t 연기군';
+		str += '\n 예산군';
+		str += '\t \t \t 천안시 동남구';
+		str += '\n 천안시 서북구';
+		str += '\t 천안시';
+		str += '\n 청양군';
+		str += '\t \t \t 태안군';
+		str += '\n 홍성군';
+		$('#targetTextarea').val(str);
+	});
+	
+	$('#btnDaejeon').click(function(){
+		$('#targetLabel').text('대전');
+		let str = "";
+		str += ' 대덕구';
+		str += '\t \t \t 대덕구';
+		str += '\n 동구';
+		str += '\t \t \t 서구';
+		str += '\n 유성구';
+		str += '\t \t \t 중구';
+		$('#targetTextarea').val(str);
+	});
 	
 	
 </script>
