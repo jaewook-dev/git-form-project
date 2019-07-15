@@ -364,7 +364,49 @@
 		$('#targetTextarea').val(str);
 	});
 	
+	$('#btnUlsan').click(function(){
+		$('#targetLabel').text('울산');
+		let str = "";
+		str += ' 남구';
+		str += '\t \t \t 동구';
+		str += '\n 북구';
+		str += '\t \t \t 울주군';
+		str += '\n 중구';
+		$('#targetTextarea').val(str);
+	});
 	
+	$('#btnJeonbuk').click(function(){
+		$('#targetLabel').text('전북');
+		let str = '';
+		str += ' 고창군';
+		str += '\t \t \t 군산시';
+		str += '\n 김제시';
+		str += '\t \t \t 남원시';
+		str += '\n 무주군';
+		str += '\t \t \t 부안군';
+		str += '\n 순창군';
+		str += '\t \t \t 완주군';
+		str += '\n 익산시';
+		str += '\t \t \t 임실군';
+		str += '\n 장수군';
+		str += '\t \t \t 전주시 덕진구';
+		str += '\n 전주시 완산구';
+		str += '\t 전주시';
+		str += '\n 정읍시';
+		str += '\t \t \t 진안군';
+		$('#targetTextarea').val(str);
+	});
+	
+	$('#btnGwangju').click(function(){
+		$('#targetLabel').text('광주');
+		let str = '';
+		str += ' 광산구';
+		str += '\t \t \t 남구';
+		str += '\n 동구';
+		str += '\t \t \t 북구';
+		str += '\n 서구';
+		$('#targetTextarea').val(str);
+	});
 	
 	
 </script>
