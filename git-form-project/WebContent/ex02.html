@@ -180,8 +180,20 @@
 	let endDate = d;
 	$('#btnWeek').click(function(){
 		endDate.setDate(endDate.getDate() + 7);
-		console.log(endDate.getFullYear());
 		$('#endDate').val(`${endDate.getFullYear()}-${endDate.getMonth()+1}-${endDate.getDate()}`);
+		endDate.setDate(endDate.getDate() - 7);
+	});
+	
+	$('#btnMonth').click(function(){
+		endDate.setMonth(endDate.getMonth() + 1);
+		$('#endDate').val(`${endDate.getFullYear()}-${endDate.getMonth()+1}-${endDate.getDate()}`);
+		endDate.setMonth(endDate.getMonth() - 1);
+	});
+	
+	$('#btn3Month').click(function(){
+		endDate.setMonth(endDate.getMonth() + 3);
+		$('#endDate').val(`${endDate.getFullYear()}-${endDate.getMonth()+1}-${endDate.getDate()}`);
+		endDate.setMonth(endDate.getMonth() - 3);
 	});
 	
 	$('#tip').click(function(){
