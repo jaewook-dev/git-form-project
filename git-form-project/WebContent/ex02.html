@@ -46,11 +46,13 @@
 				<div class="tab-content">
 					<div class="tab-pane container" id="menu1">
 					<br>
-					<!--  -->
+					<!-- Tip badge -->
 					<a href="#" id = "tip" data-toggle="popover" data-content="국가기관">
 						<span class="badge badge-primary"> TIP </span>
 					</a>
 					<hr>
+					
+					<!-- 날짜 -->
 					<div>
 						<input type = "text" id = "beginDate">
 						~
@@ -174,6 +176,13 @@
 	
 	$('#beginDate').val(`${year}-${month}-${day}`);
 	$('#endDate').val(`${year}-${month}-${day}`);
+
+	let endDate = d;
+	$('#btnWeek').click(function(){
+		endDate.setDate(endDate.getDate() + 7);
+		console.log(endDate.getFullYear());
+		$('#endDate').val(`${endDate.getFullYear()}-${endDate.getMonth()+1}-${endDate.getDate()}`);
+	});
 	
 	$('#tip').click(function(){
 		$('#tip').popover(); 
