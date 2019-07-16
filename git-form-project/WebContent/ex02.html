@@ -38,18 +38,52 @@
 
 				<!-- Nav tabs -->
 				<ul class="nav nav-tabs">
-					<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu1">Menu 1</a></li>
-					<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a></li>
+					<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu1"> 조건 검색 </a></li>
+					<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu2"> 지역 검색 </a></li>
 				</ul>
 
 				<!-- Tab panes -->
 				<div class="tab-content">
 					<div class="tab-pane container" id="menu1">
 					<br>
-					<!-- Tip badge -->
-					<a href="#" id = "tip" data-toggle="popover" data-content="국가기관">
-						<span class="badge badge-primary"> TIP </span>
-					</a>
+					<h2> 훈련기관 검색 </h2>
+					<hr>
+					<ul>
+						<li> 
+							훈련기관
+							&nbsp;
+							<input type = "text"> 
+						</li>
+						<br>
+						<li> 
+							훈련과정
+							&nbsp;
+							<input type = "text"> 
+						</li>
+						<br>
+						<li> 
+							훈련유형
+							&nbsp;
+							<select name = "training">
+								<option value = ""> 전체 </option>
+								<option value = "내일배움카드(구직자)"> 내일배움카드(구직자) </option>
+								<option value = "국가기간전략산업직종"> 국가기간전략산업직종 </option>
+								<option value = "컨소시움채용예정자"> 컨소시움채용예정자 </option>
+								<option value = "폴리텍대학훈련"> 폴리텍대학훈련 </option>
+								<option value = "청년취업아카데미"> 청년취업아카데미 </option>
+							</select> 
+							<!-- Tip badge -->
+							<a href="#" id = "tip" data-toggle="popover" data-content="국가기관">
+							<span class="badge badge-primary"> TIP </span>
+							</a>
+							&nbsp;
+							ㆍ특화과정
+							&nbsp;
+							<select name = "special">
+								<option value = ""> 전체 </option>
+							</select>
+						</li>
+					</ul>
 					<hr>
 					
 					<!-- 날짜 -->
@@ -61,6 +95,10 @@
 						<button id = "btnWeek"> 1주일 </button>
 						<button id = "btnMonth"> 1개월 </button>
 						<button id = "btn3Month"> 3개월 </button>
+					</div>
+					<br>
+					<div class ="text-center">
+					<button class="btn btn-dark text-center">검색</button>
 					</div>
 					</div>
 					
@@ -179,18 +217,21 @@
 
 	let endDate = d;
 	$('#btnWeek').click(function(){
+		$('#beginDate').val(`${year}-${month}-${day}`);
 		endDate.setDate(endDate.getDate() + 7);
 		$('#endDate').val(`${endDate.getFullYear()}-${endDate.getMonth()+1}-${endDate.getDate()}`);
 		endDate.setDate(endDate.getDate() - 7);
 	});
 	
 	$('#btnMonth').click(function(){
+		$('#beginDate').val(`${year}-${month}-${day}`);
 		endDate.setMonth(endDate.getMonth() + 1);
 		$('#endDate').val(`${endDate.getFullYear()}-${endDate.getMonth()+1}-${endDate.getDate()}`);
 		endDate.setMonth(endDate.getMonth() - 1);
 	});
 	
 	$('#btn3Month').click(function(){
+		$('#beginDate').val(`${year}-${month}-${day}`);
 		endDate.setMonth(endDate.getMonth() + 3);
 		$('#endDate').val(`${endDate.getFullYear()}-${endDate.getMonth()+1}-${endDate.getDate()}`);
 		endDate.setMonth(endDate.getMonth() - 3);
