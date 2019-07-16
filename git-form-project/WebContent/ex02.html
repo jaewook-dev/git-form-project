@@ -21,6 +21,11 @@
 <!-- Popper JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 
+<!-- JQuery UI -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
@@ -39,7 +44,21 @@
 
 				<!-- Tab panes -->
 				<div class="tab-content">
-					<div class="tab-pane container" id="menu1">...</div>
+					<div class="tab-pane container" id="menu1">
+					<br>
+					<a href="#" id = "tip" data-toggle="popover" data-content="국가기관">
+						<span class="badge badge-primary"> TIP </span>
+					</a>
+					<hr>
+					<div>
+						<input type = "text" id = "beginDate">
+						<input type = "text" id = "endDate">
+						<button id = "btnWeek"> 1주일 </button>
+						<button id = "btnMonth"> 1개월 </button>
+						<button id = "btn3Month"> 3개월 </button>
+					</div>
+					</div>
+					
 					<div class="tab-pane container" id="menu2">
 						<!-- 시(도) 선택 버튼 -->
 						<div>
@@ -127,6 +146,19 @@
 	</div>
 </body>
 <script>
+	let d = new Date();
+	let year = d.getFullYear();
+	let month = d.getMonth() + 1;
+	let day = d.getDate();
+	
+	$('#beginDate').val(`${year}-${month}-${day}`);
+	$('#endDate').val(`${year}-${month}-${day}`);
+	
+	$('#tip').click(function(){
+		$('#tip').popover(); 
+	});
+	
+	
 	$('#btnSeoul').click(function() {
 		$('#targetLabel').text('서울');
 		let str = '';
@@ -491,7 +523,7 @@
 		$('#targetLabel').text('제주');
 		let str = '';
 		str += ' 서귀포시';
-		str += '\t \t \t 제주시';
+		str += '\t \t 제주시';
 		$('#targetTextarea').val(str);
 	});
 	
