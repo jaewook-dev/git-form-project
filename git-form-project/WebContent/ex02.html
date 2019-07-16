@@ -46,13 +46,16 @@
 				<div class="tab-content">
 					<div class="tab-pane container" id="menu1">
 					<br>
+					<!--  -->
 					<a href="#" id = "tip" data-toggle="popover" data-content="국가기관">
 						<span class="badge badge-primary"> TIP </span>
 					</a>
 					<hr>
 					<div>
 						<input type = "text" id = "beginDate">
+						~
 						<input type = "text" id = "endDate">
+						
 						<button id = "btnWeek"> 1주일 </button>
 						<button id = "btnMonth"> 1개월 </button>
 						<button id = "btn3Month"> 3개월 </button>
@@ -146,6 +149,24 @@
 	</div>
 </body>
 <script>
+	$('#beginDate').datepicker({
+		showOn: "button",
+    	buttonImage: "img/cal.png",
+    	buttonImageOnly: true,
+    	buttonText: "Select date"
+	});
+		
+	$('#beginDate').datepicker('option','dateFormat','yy-mm-dd');
+		
+	$('#endDate').datepicker({
+		showOn: "button",
+    	buttonImage: "img/cal.png",
+    	buttonImageOnly: true,
+    	buttonText: "Select date"
+	});
+	
+	$('#endDate').datepicker('option','dateFormat','yy-mm-dd');
+	
 	let d = new Date();
 	let year = d.getFullYear();
 	let month = d.getMonth() + 1;
